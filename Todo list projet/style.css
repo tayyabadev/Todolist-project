@@ -1,0 +1,897 @@
+* {
+    margin: 0;
+    font-family: kanit;
+}
+
+body {
+    background-color: #f5f5f5;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode {
+    background-color: rgba(30, 30, 30, 1);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 750px;
+    height: 100vh;
+    position: relative;
+
+}
+
+.dark-mode .container {
+    background-color: rgba(30, 30, 30, 1);
+}
+
+.head {
+    width: 750px;
+    height: 135px;
+    position: absolute;
+    left: 0px;
+}
+
+.text {
+    position: absolute;
+    top: 40px;
+    left: 320px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: medium;
+}
+
+.dark-mode .text {
+    color: white;
+}
+
+.header {
+    width: 750px;
+    height: 38px;
+    position: absolute;
+    left: 0px;
+    top: 97px;
+    display: flex;
+}
+
+.searchContainer {
+    height: 38px;
+    width: 595px;
+    border: 2px solid rgba(108, 99, 255, 1);
+    border-radius: 6px;
+    padding-left: 2px;
+
+}
+
+.dark-mode .searchContainer {
+    border: 2px solid rgb(244, 244, 246);
+}
+
+.searchContainer input {
+    border: 0px;
+    width: 440px;
+    height: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 0px;
+    background-color: whitesmoke;
+    outline: none;
+}
+
+.dark-mode .searchContainer input {
+    background: rgba(30, 30, 30, 1);
+    color: #ffffff;
+}
+
+::placeholder {
+    color: #C3C1E5;
+}
+
+.dark-mode ::placeholder {
+    color: rgba(102, 102, 102, 1);
+}
+
+.filter-todo {
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+.searchContainer button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 0px;
+    position: absolute;
+    top: 9px;
+    bottom: 9px;
+    left: 550px;
+}
+
+.dark-mode .searchContainer button {
+    background-color: rgba(30, 30, 30, 1);
+
+}
+
+.searchContainer button img {
+    width: 21px;
+    height: 21px;
+    translate: -4px 1px;
+}
+
+.dropdown select {
+    width: 95px;
+    height: 38px;
+    background-color: rgba(108, 99, 255, 1);
+    color: white;
+    margin-left: 16px;
+    border-radius: 6px;
+    padding: 0px 9px 2px 5px;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+}
+
+.menu option {
+    border-radius: 6px;
+    background-color: white;
+    color: rgba(108, 99, 255, 1);
+    outline: none;
+    border: 0px;
+}
+
+.menu option:hover {
+    background-color: #d0cff0;
+}
+
+.colourscheme {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(108, 99, 255, 1);
+    margin-left: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.colourscheme img {
+    width: 22px;
+    height: 22px;
+    padding: 8px;
+}
+
+.dark-mode .lightmodepic {
+    visibility: hidden;
+}
+
+.darkmodepic {
+    visibility: hidden;
+}
+
+.dark-mode .darkmodepic {
+    visibility: visible;
+    translate: 0px -42px;
+}
+
+.bodyy {
+    position: absolute;
+    top: 138px;
+    width: 750px;
+    height: 425px;
+
+}
+
+.bodyy .list {
+    width: 520px;
+    height: 425px;
+    margin: 35px 115px 0px 75px;
+}
+
+.listitemclass {
+    margin-bottom: 4px;
+    margin-top: 30px;
+    list-style: none;
+}
+
+.list .note {
+    width: 525px;
+    height: 26px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid rgba(108, 99, 255, 1);
+    color: rgba(108, 99, 255, 1);
+    background-color: rgba(108, 99, 255, 1);
+    border-radius: 2px;
+    outline: none;
+}
+
+.content {
+    width: 420px;
+    height: 26px;
+    font-size: 20px;
+    font-weight: medium;
+    text-align: left;
+    margin-left: 43px;
+    margin-top: 3px;
+}
+
+.dark-mode .content {
+    color: white;
+}
+
+.removewriteicons {
+    width: 62px;
+    height: 18px;
+    position: absolute;
+    left: 463px;
+    top: 3px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.removewriteicons .write img {
+    width: 18px;
+    height: 18px;
+}
+
+.removewriteicons .remove img {
+    width: 18px;
+    height: 18px;
+}
+
+.write:hover,
+.remove:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.add {
+    border: 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    left: 70%;
+    cursor: pointer;
+    padding: 0px;
+}
+
+.add img {
+    width: 50px;
+    height: 50px;
+    translate: -5px -5px;
+}
+
+.newnotes {
+    width: 500px;
+    height: 289px;
+    position: fixed;
+    top: 118px;
+    left: 450px;
+    border-radius: 7px;
+    visibility: hidden;
+    background-color: white;
+    border: 2px solid rgba(108, 99, 255, 1);
+}
+
+.dark-mode .newnotes {
+    border: 2px solid whitesmoke;
+    background: #2d2d2d;
+}
+
+.newnotes .addnewnote {
+    width: 116px;
+    height: 24px;
+    margin: 18px 195px 25px 195px;
+
+}
+
+.dark-mode .addnotes {
+    background: #404040;
+    border-color: #505050;
+    color: #ffffff;
+}
+
+.dark-mode h2 {
+    color: white;
+}
+
+.newnotes .addnotes {
+    width: 420px;
+    height: 38px;
+    outline: none;
+    border: 2px solid rgba(108, 99, 255, 1);
+    border-radius: 5px;
+    position: relative;
+    left: 30px;
+    padding-left: 16px;
+}
+
+.dark-mode .addnotes {
+    border: 2px solid white;
+}
+
+.newnotes .buttons {
+    position: absolute;
+    top: 230px;
+    left: 30px;
+}
+
+.newnotes button {
+    width: 110px;
+    height: 38px;
+    border-radius: 5px;
+    outline: none;
+    border: 0px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.newnotes .cancel {
+    background-color: white;
+    border: 2px solid rgba(108, 99, 255, 1);
+
+}
+
+.newnotes .cancel:hover {
+    background-color: whitesmoke;
+}
+
+.newnotes .apply:hover {
+    background-color: rgb(81, 75, 194);
+}
+
+.dark-mode .cancel {
+    background-color: #2d2d2d;
+    color: rgba(108, 99, 255, 1);
+}
+
+.newnotes .apply {
+    background-color: rgba(108, 99, 255, 1);
+    color: white;
+    margin-left: 220px;
+}
+
+.hrclass {
+    height: 1.5px;
+    outline: none;
+    width: 520px;
+    border: 0px;
+    margin-top: 17px;
+    margin-bottom: 50px;
+    background-color: rgba(108, 99, 255, 1);
+}
+
+.open {
+    visibility: visible;
+
+}
+
+.boxopen {
+    z-index: 999;
+    filter: blur(4px);
+    width: 100vw;
+    height: 100vh;
+}
+
+@media (max-width: 550px) {
+    .container {
+        width: 350px;
+        height: 100vh;
+    }
+
+    .head {
+        width: 350px;
+        height: 35px;
+        left: 0px;
+    }
+
+    .text {
+        top: 40px;
+        left: 25vw;
+    }
+
+    .header {
+        width: 300px;
+        height: 400px;
+        position: absolute;
+        left: 0px;
+        top: 105px;
+    }
+
+    .searchContainer {
+        height: 43px;
+        width: 250px;
+        margin-left: 30px;
+    }
+
+    .searchContainer input {
+        width: 190px;
+    }
+
+    .searchContainer button {
+        position: absolute;
+        left: 80%;
+    }
+
+
+    .dropdown select {
+        width: 95px;
+        height: 38px;
+        position: absolute;
+        top: 70px;
+        left: 50px;
+        margin-left: 16px;
+    }
+
+    .colourscheme {
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 70px;
+        left: 170px;
+    }
+
+    .bodyy {
+        position: relative;
+        top: 210px;
+        left: 0px;
+        width: 200px;
+        height: 425px;
+    }
+
+    .bodyy .list {
+        width: 200px;
+        height: 425px;
+        position: relative;
+        left: -120px;
+        margin: 35px 115px 0px 115px;
+    }
+
+    .listitemclass {
+        margin-bottom: 4px;
+        margin-top: 60px;
+        list-style: none;
+    }
+
+    .list .note {
+        width: 200px;
+        height: 26px;
+        position: relative;
+    }
+
+    .checkbox {
+        width: 34px;
+        height: 34px;
+    }
+
+    .content {
+        width: 150px;
+        height: 26px;
+        margin-left: 43px;
+        margin-top: 3px;
+    }
+
+    .removewriteicons {
+        width: 62px;
+        height: 18px;
+        position: absolute;
+        left: 220px;
+        top: 3px;
+    }
+
+    .removewriteicons .write img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .removewriteicons .remove img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .add {
+        left: 80vw;
+        top: 85%;
+
+    }
+
+    .newnotes {
+        width: 280px;
+        height: 250px;
+        position: fixed;
+        top: 30%;
+        left: 10%;
+
+    }
+
+    .open {
+        visibility: visible;
+    }
+
+    .newnotes .addnewnote {
+        width: 116px;
+        height: 24px;
+        margin: 18px 5px 50px 100px;
+    }
+
+    .newnotes .addnotes {
+        width: 250px;
+        position: relative;
+        left: 15px;
+        padding-left: 6px;
+    }
+
+    .newnotes .buttons {
+        position: absolute;
+        top: 200px;
+        left: 40px;
+    }
+
+    .newnotes button {
+        width: 90px;
+        height: 38px;
+    }
+
+    .hrclass {
+        width: 280px;
+    }
+
+    .newnotes .apply {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 550px)and (max-width: 767px) {
+    .container {
+        width: 500px;
+        height: 100vh;
+    }
+
+    .head {
+        width: 500px;
+        height: 35px;
+        left: 0px;
+    }
+
+    .text {
+        top: 40px;
+        left: 45%;
+    }
+
+    .header {
+        width: 500px;
+        height: 400px;
+        position: absolute;
+        left: 0px;
+        top: 105px;
+    }
+
+    .searchContainer {
+        height: 43px;
+        width: 450px;
+        margin-left: 30px;
+    }
+
+
+    .searchContainer input {
+        width: 400px;
+    }
+
+
+    .searchContainer button {
+        position: absolute;
+        left: 85%;
+    }
+
+    .dropdown select {
+        width: 100px;
+        height: 38px;
+        position: absolute;
+        top: 70px;
+        left: 150px;
+        margin-left: 16px;
+    }
+
+    .colourscheme {
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 70px;
+        left: 270px;
+    }
+
+    .bodyy {
+        position: relative;
+        top: 210px;
+        left: 0px;
+        width: 500px;
+        height: 425px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .bodyy .list {
+        width: 500px;
+        height: 425px;
+        position: relative;
+        left: -120px;
+        margin: 35px 115px 0px 115px;
+    }
+
+    .listitemclass {
+        margin-bottom: 4px;
+        margin-top: 60px;
+        list-style: none;
+    }
+
+    .list .note {
+        width: 500px;
+        height: 26px;
+        position: relative;
+    }
+
+    .checkbox {
+        width: 34px;
+        height: 34px;
+    }
+
+    .content {
+        width: 550px;
+        height: 26px;
+        margin-left: 43px;
+        margin-top: 3px;
+    }
+
+    .removewriteicons {
+        width: 62px;
+        height: 18px;
+        position: absolute;
+        left: 400px;
+        top: 3px;
+    }
+
+    .removewriteicons .write img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .removewriteicons .remove img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .add {
+        left: 87vw;
+        top: 85%;
+
+    }
+
+    .newnotes {
+        width: 450px;
+        height: 300px;
+        position: fixed;
+        top: 30%;
+        left: 15%;
+
+    }
+
+    .open {
+        visibility: visible;
+    }
+
+    .newnotes .addnewnote {
+        width: 300px;
+        height: 24px;
+        margin: 18px 5px 50px 100px;
+    }
+
+    .newnotes .addnotes {
+        width: 410px;
+        position: relative;
+        left: 15px;
+        padding-left: 6px;
+    }
+
+    .newnotes .buttons {
+        position: absolute;
+        top: 200px;
+        left: 40px;
+    }
+
+    .newnotes button {
+        width: 180px;
+        height: 38px;
+    }
+
+    .hrclass {
+        width: 480px;
+    }
+
+    .newnotes .apply {
+        margin-left: 20px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .container {
+        width: 700px;
+        height: 100vh;
+    }
+
+    .head {
+        width: 700px;
+        height: 35px;
+        left: 0px;
+    }
+
+    .text {
+        top: 40px;
+        left: 45%;
+    }
+
+    .header {
+        width: 700px;
+        height: 400px;
+        position: absolute;
+        left: 0px;
+        top: 105px;
+    }
+
+    .searchContainer {
+        height: 43px;
+        width: 500px;
+        margin-left: 20px;
+
+    }
+
+    .searchContainer input {
+        width: 450px;
+    }
+
+
+    .searchContainer button {
+        position: absolute;
+        left: 68%;
+    }
+
+
+    .dropdown select {
+        width: 100px;
+        height: 43px;
+        position: absolute;
+        top: 0px;
+        left: 530px;
+        margin-left: 5px;
+    }
+
+    .colourscheme {
+        width: 43px;
+        height: 43px;
+        position: absolute;
+        top: 0px;
+        left: 630px;
+    }
+
+    .bodyy {
+        position: relative;
+        top: 170px;
+        left: 0px;
+        width: 500px;
+        height: 425px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .bodyy .list {
+        width: 700px;
+        height: 425px;
+        position: relative;
+        left: -180px;
+        margin: 35px 115px 0px 185px;
+    }
+
+    .listitemclass {
+        margin-bottom: 4px;
+        margin-top: 60px;
+        list-style: none;
+    }
+
+    .list .note {
+        width: 700px;
+        height: 26px;
+        position: relative;
+    }
+
+    .checkbox {
+        width: 34px;
+        height: 34px;
+    }
+
+    .content {
+        width: 750px;
+        height: 26px;
+        margin-left: 43px;
+        margin-top: 3px;
+    }
+
+    .removewriteicons {
+        width: 62px;
+        height: 18px;
+        position: absolute;
+        left: 500px;
+        top: 3px;
+    }
+
+
+    .add {
+        left: 80vw;
+        top: 85%;
+
+    }
+
+    .newnotes {
+        width: 550px;
+        height: 300px;
+        position: fixed;
+        top: 30%;
+        left: 17%;
+
+    }
+
+    .open {
+        visibility: visible;
+    }
+
+    .newnotes .addnewnote {
+        width: 400px;
+        height: 24px;
+        margin: 18px 5px 50px 100px;
+    }
+
+    .newnotes .addnotes {
+        width: 490px;
+        position: relative;
+        left: 17px;
+        padding-left: 6px;
+    }
+
+    .newnotes .buttons {
+        position: absolute;
+        top: 200px;
+        left: 60px;
+    }
+
+    .newnotes button {
+        width: 120px;
+        height: 38px;
+        margin-right: 100px;
+    }
+
+    .hrclass {
+        width: 580px;
+    }
+
+    .newnotes .apply {
+        margin-left: 40px;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="box" id="box">
+        <div class="container">
+            <div class="head">
+                <div class="text">TODO LIST</div>
+                <div class="header">
+                    <div class="searchContainer">
+                        <input type="text" placeholder="Search note..." name="q" id="find" onkeyup="search()">
+                        <button type="submit"><img src="/assests/searchicon.png" alt="search icon"></button>
+                    </div>
+                    <div class="dropdown">
+                        <div class="menu">
+                            <select name="todos" class="filter-todo">
+                                <option value="all">All</option>
+                                <option value="Completed">Complete</option>
+                                <option value="Incompleted">Incomplete</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="colourscheme" id="themetoggle">
+                        <img src="assests/Vector.png" alt="moon icon" class="lightmodepic">
+                        <img src="assests/darkmodepic.png" alt="darkmodepic" class="darkmodepic">
+                    </div>
+                </div>
+            </div>
+            <div class="bodyy">
+
+                <div class="list">
+                    <ul id="Tasklist">
+                    </ul>
+                </div>
+                <button type="button" class="add" id="add"><img src="/assests/Add button.png"
+                        alt="addbutton icon"></button>
+            </div>
+
+        </div>
+    </div>
+    <div class="newnotes" id="newnotes">
+        <div class="addnewnote">
+            <h2>New Note</h2>
+        </div>
+        <input type="text" placeholder="Input your note..." class="addnotes" id="addnotes">
+        <div class="buttons">
+            <button type="submit" class="cancel" id="cancel">Cancel</button>
+            <button type="submit" class="apply" id="apply">Apply</button>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>
