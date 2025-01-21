@@ -91,6 +91,11 @@ function search() {
         const notFoundText = document.createElement('h3');
         notFoundText.textContent = 'NOT FOUND...';
         notFoundText.style.margin = '20px 0';
+        if (localStorage.getItem('theme') === 'light') {
+            notFoundText.style.color = 'black';
+        } else {
+            notFoundText.style.color = 'white';
+        }
 
         notFoundContainer.appendChild(notFoundImage);
         notFoundContainer.appendChild(notFoundText);
