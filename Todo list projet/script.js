@@ -55,38 +55,15 @@ function loadTheme() {
         body.classList.add('dark-mode');
     }
 }
-// function search() {
-//     const filter = document.getElementById('find').value.toUpperCase();
-//     const tasks = document.querySelectorAll('.listitemclass');
-//     tasks.forEach(task => {
-//         const content = task.querySelector('.content');
-//         if (content) {
-//             const text = content.textContent || content.innerText;
-//             if (text.toUpperCase().includes(filter)) { task.style.display = ''; }
-//             else { task.style.display = 'none';
-//                   tasklist.innerHTML='<img src="assests/Detective-check-footprint 1.png" alt=""></img>';
-//                   tasklist.style.marginLeft='80px';
-//                 const notfound=document.createElement('h3')
-//                 notfound.textContent='NOT FOUND...';
-//                 notfound.style.margin='20px 50px'
-//                 tasklist.appendChild(notfound);
-//              }
-//         }
-//         tasklist.removeChild(notfound);
-//     });
-// }
 function search() {
     const filter = document.getElementById('find').value.toUpperCase();
     const tasks = document.querySelectorAll('.listitemclass');
     let matchFound = false;
-
-    // Remove existing "not found" elements if they exist
     const existingNotFound = tasklist.querySelector('.not-found-container');
     if (existingNotFound) {
         tasklist.removeChild(existingNotFound);
     }
 
-    // Search through tasks
     tasks.forEach(task => {
         const content = task.querySelector('.content');
         if (content) {
@@ -100,7 +77,6 @@ function search() {
         }
     });
 
-    // Show "not found" message and image if no matches
     if (!matchFound && filter !== '') {
         const notFoundContainer = document.createElement('div');
         notFoundContainer.className = 'not-found-container';
