@@ -121,12 +121,12 @@ Commit your changes (git commit -m 'Add some AmazingFeature')
 Push to the branch (git push origin feature/AmazingFeature)
 Open a Pull Request
 
-#License
+# License
 👤 Author
 Tayyaba Tabassum
 
 GitHub: @tayyabadev
 LinkedIn: tayyabadev
 
-#Acknowledgments
+# Acknowledgments
 https://www.figma.com/design/8TcAfYDibfFPYgE1ioj0UT/Simple-ToDo-List-Design-(Community)?node-id=0-1&p=f&t=KaQh2diSlrtDDFQn-0
